@@ -4,14 +4,14 @@ int bins(int n , int a[] , int capacity)
     int count=1,k = capacity;
     for(int i=0;i<n;i++)
     {
-        if(a[i] < capacity)
+        if(a[i] < k)
         {
-          capacity-=a[i];
+          k-=a[i];
         }
         else
         {
           count++;
-          k = capacity;
+          k = capacity-a[i];
         }
     }
     return count;
